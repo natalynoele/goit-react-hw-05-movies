@@ -13,3 +13,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0 50px;
+}
+
+.menu {
+  padding: 20px 0;
+  margin-bottom: 30px;
+  display: flex;
+  list-style: none;
+}
+
+.menu_item {
+  margin-right: 30px;
+}
+.menu_item a {
+  text-decoration: none;
+}
+
+.active {
+  color: blue;
+  text-decoration: none;
+}
+
+.goBack{
+  margin-bottom: 30px;  
+}
+
+.goBack a {
+  text-decoration: none;
+}
