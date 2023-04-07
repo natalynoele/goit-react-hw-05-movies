@@ -61,7 +61,7 @@ const MovieDetails = ({ prevPageLocation }) => {
   } = movie;
 
   const release_year = release_date ? new Date(release_date).getFullYear() : '';
-  console.log(release_year);
+
   return (
     <>
       <div className="goBack">

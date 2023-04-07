@@ -1,12 +1,8 @@
 import { Routes, Route, NavLink } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-
-
 import Home from 'pages/Home';
 import Movies from 'pages/Movies';
 import MovieDetails from 'pages/movie/MovieDetails';
-// import Cast from './cast/Cast';
-// import Reviews from './reviews/Reviews';
 
 const Cast = lazy(() => import('../pages/cast/Cast'));
 const Reviews = lazy(() => import('../pages/reviews/Reviews'));
