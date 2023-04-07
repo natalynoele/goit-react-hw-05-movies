@@ -1,0 +1,41 @@
+.goBack{
+  margin-bottom: 30px;  
+}
+
+.goBack a {
+  font: inherit;
+  font-size: 20px;
+  text-decoration: none;
+  color: red;
+}
+.movie-wrapper{
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.poster{
+animation: poster 1.5s;
+margin-right: 30px;
+align-items: center;
+}
+
+@keyframes poster {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.submenu {
+list-style: none;
+display: flex;
+}
+
+.submenu-item {
+  margin-right: 50px;
+}
+.submenu-item a{
+  font-size: 20px;
+}

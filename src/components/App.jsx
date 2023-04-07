@@ -4,12 +4,12 @@ import { lazy, Suspense } from 'react';
 
 import Home from 'pages/Home';
 import Movies from 'pages/Movies';
-import MovieDetails from 'pages/MovieDetails';
+import MovieDetails from 'pages/movie/MovieDetails';
 // import Cast from './cast/Cast';
 // import Reviews from './reviews/Reviews';
 
-const Cast = lazy(() => import('./cast/Cast'));
-const Reviews = lazy(() => import('./reviews/Reviews'));
+const Cast = lazy(() => import('../pages/cast/Cast'));
+const Reviews = lazy(() => import('../pages/reviews/Reviews'));
 
 export const App = () => {  
   return (
@@ -17,10 +17,10 @@ export const App = () => {
       <header>
         <nav>
           <ul className="menu">
-            <li className="menu_item">
+            <li className="menu-item">
               <NavLink to="/">Home</NavLink>
             </li>
-            <li>
+            <li className="menu-item">
               <NavLink to="/movies">Movies</NavLink>
             </li>
           </ul>

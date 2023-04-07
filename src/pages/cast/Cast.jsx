@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import getMovies from 'service/getMovies';
 import female from '../../images/female.jpg';
 import male from '../../images/male.jpg';
@@ -8,13 +9,12 @@ const Cast = () => {
   const [actors, setActors] = useState([]);
   const { movieId } = useParams();
   const endpoint = `/movie/${movieId}/credits`;
-   const location = useLocation();
 
   useEffect(() => {
     getMovies(endpoint).then(response => {
       setActors(response.cast);
     });
-  }, []);
+  }, [endpoint]);
 
   const actorsList = actors.map(
     ({ credit_id, profile_path, name, character, gender }) => {
@@ -43,10 +43,13 @@ const Cast = () => {
 
   return (
     <div className="cast-wrapper">
-      <h3>Actors and actresses</h3>
-      <ul className="actorsList">{actorsList}</ul>
+      <h2 className="page-title">Actors and Actresses</h2>
+      <ul className="actors-list">{actorsList}</ul>
     </div>
   );
 };
 
+Cast.propTypes = {
+  actors: PropTypes.arrayOf(PropTypes.shape)
+}
 export default Cast;

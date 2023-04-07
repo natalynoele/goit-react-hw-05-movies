@@ -1,9 +1,8 @@
 import axios from 'axios';
-import BASE_URL from 'baseUrl';
+import BASE_URL from 'service/baseUrl';
 import API_KEY from './apiKey';
 
 async function getMovies(endpoint) {
-
   try {
     const response = await axios.get(
       `${BASE_URL}${endpoint}?api_key=${API_KEY}`
@@ -13,7 +12,5 @@ async function getMovies(endpoint) {
     console.error(error);
   }
 }
-
-
 
 export default getMovies;
