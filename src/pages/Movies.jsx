@@ -42,18 +42,17 @@ const Movies = () => {
   }; 
  
    return (
-    <>
-      <header className="Searchbar">
-        <form className="SearchForm" onSubmit={handleSubmit}>
+     <>
+      <header className="searchbar">
+        <form className="searchform" onSubmit={handleSubmit}>
           <input
-            className="SearchForm-input"
+            className="searchform-input"
             type="text"
-             name="query"
-            
+             name="query"            
             placeholder="Search movies"
             onChange={e => setSearchParams({ query: e.target.value })}
           />
-          <button type="submit" className="SearchForm-button">
+          <button type="submit" className="searchform-button">
             Search
           </button>
         </form>
